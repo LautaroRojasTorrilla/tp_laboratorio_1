@@ -154,7 +154,7 @@ int getInt(char mensaje[], int reintentos, int minimo, int maximo, char mensajeE
 		printf("%s", mensaje);
 		retornoScanF = scanf("%d",&auxiliarInt);
 		do {
-			printf("\t este es el reintento %d", reintentos);
+			//printf("\t\n este es el reintento %d", reintentos);
 			if (retornoScanF != 1 || auxiliarInt > maximo || auxiliarInt < minimo)
 				// Si no se hace la validación, se pide que ingrese de nuevo
 			{
@@ -280,13 +280,12 @@ double getDOUBLE(double numero)
 	return numeroIngresado;
 }
 
-int continuar(char* mensaje) // HAY QUE HACERLE LAS VALIDACIONES
+int menuContinuar(char* mensaje) // HAY QUE HACERLE LAS VALIDACIONES
 {
 	int seleccion;
 
 	printf("%s", mensaje);
-	printf("\n1. Sí\n");
-	printf("2. No\n");
+	printf("\n1. Sí\n2. No\n");
 	scanf("%d", &seleccion);
 
 	return seleccion;

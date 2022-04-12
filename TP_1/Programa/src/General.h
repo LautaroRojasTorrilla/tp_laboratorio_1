@@ -30,7 +30,7 @@ int utn_getNumeroFlotante(float *pResultado, char *mensaje, char *mensajeError, 
 int utn_getCaracter(char *pResultado, char *mensaje, char *mensajeError, char minimo, char maximo, int reintentos);
 void cargaArray(int array[], int tam);
 double getDOUBLE(double);
-int menuContinuar(char*);
+int menuContinuar(char* mensaje);
 
 // OUTPUT
 

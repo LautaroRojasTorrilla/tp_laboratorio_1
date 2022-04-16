@@ -12,6 +12,9 @@
 #include <stdlib.h>
 
 // CALCULOS
+float precioConDescuento(float precioIngresado, int porcentaje);
+float precioConAumento(float precioIngresado, int porcentaje);
+float precioBitcoin(float precioIngresado, float precioBitcoin);
 float sumar(float sumando1, float sumando2);
 float restar(float sumando1, float sumando2);
 float multiplicar(float factor1, float factor2);
@@ -31,9 +34,12 @@ int utn_getCaracter(char *pResultado, char *mensaje, char *mensajeError, char mi
 void cargaArray(int array[], int tam);
 double getDOUBLE(double);
 int menuContinuar(char* mensaje);
+void mainMenu(int a, float b, float c);
 
 // OUTPUT
 
+void printValues(int kilometros, float precioAero, float precioDebAero,  float precioCredAero, float precioBTCAero, float precioKMAero, float precioLatam, float precioDebLatam, float precioCredLatam, float precioBTCLatam, float precioKMLatam, float diferenciaPrecio);
+void forcedDataUpload();
 void imprimirArray(int array[], int tam);
 
 #endif /* GENERAL_H_ */

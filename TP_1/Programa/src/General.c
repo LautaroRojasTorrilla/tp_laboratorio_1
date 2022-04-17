@@ -328,13 +328,16 @@ int menuContinuar(char* mensaje)
 	return seleccion;
 }
 
-void mainMenu(int a, float b, float c)
+int menuContinuar2(char* mensaje)
 {
-	printf("1. Ingresar Kilómetros: (km=%d",a);
-	printf(")\n\n2. Ingresar Precio de Vuelos: (Aerolíneas=%.2f", b);
-	printf(", Latam=%.2f", c);
-	printf(")\n\t- Precio vuelo Aerolíneas:\n\t- Precio vuelo Latam:\n\n3. Calcular todos los costos:\n\ta) Tarjeta de débito (descuento 10%%)\n\tb) Tarjeta de crédito (interés 25%%)\n\tc) Bitcoin (1BTC -> 7556100.01 Pesos Argentinos)\n\td) Mostrar precio por km (precio unitario)\n\te) Mostrar diferencia de precio ingresada (Latam - Aerolíneas)\n\n4. Informar Resultados\n\tLatam:\n\ta) Precio con tarjeta de débito: r\n\tb) Precio con tarjeta de crédito: r\n\tc) Precio pagando con bitcoin : r\n\td) Precio unitario: r\n\tAerolíneas:\n\ta) Precio con tarjeta de débito: r\n\tb) Precio con tarjeta de crédito: r\n\tc) Precio pagando con bitcoin : r\n\td) Precio unitario: r\n\tLa diferencia de precio es : r\n\n5. Carga forzada de datos\n6. Salir");
+	int seleccion;
 
+	printf("%s", mensaje);
+	printf("\n1. Sí\n2. No\n");
+	fflush(stdin);
+	scanf("%d", &seleccion);
+
+	return seleccion;
 }
 
 // OOUTPUT
@@ -394,6 +397,15 @@ void forcedDataUpload()
 	diferenciaPrecioYZForzado=restar(zForzado, yForzado);
 
 	printValues(xForzado, yForzado, precioDescontadoYForzado, precioAumentadoYForzado, precioBitcoinYForzado, precioKMYForzado, zForzado, precioDescontadoZForzado, precioAumentadoZForzado, precioBitcoinZForzado, precioKMZForzado, diferenciaPrecioYZForzado);
+}
+
+void mainMenu(int a, float b, float c)
+{
+	printf("1. Ingresar Kilómetros: (km=%d",a);
+	printf(")\n\n2. Ingresar Precio de Vuelos: (Aerolíneas=%.2f", b);
+	printf(", Latam=%.2f", c);
+	printf(")\n\t- Precio vuelo Aerolíneas:\n\t- Precio vuelo Latam:\n\n3. Calcular todos los costos:\n\ta) Tarjeta de débito (descuento 10%%)\n\tb) Tarjeta de crédito (interés 25%%)\n\tc) Bitcoin (1BTC -> 7556100.01 Pesos Argentinos)\n\td) Mostrar precio por km (precio unitario)\n\te) Mostrar diferencia de precio ingresada (Latam - Aerolíneas)\n\n4. Informar Resultados\n\tLatam:\n\ta) Precio con tarjeta de débito: r\n\tb) Precio con tarjeta de crédito: r\n\tc) Precio pagando con bitcoin : r\n\td) Precio unitario: r\n\tAerolíneas:\n\ta) Precio con tarjeta de débito: r\n\tb) Precio con tarjeta de crédito: r\n\tc) Precio pagando con bitcoin : r\n\td) Precio unitario: r\n\tLa diferencia de precio es : r\n\n5. Carga forzada de datos\n6. Salir");
+
 }
 
 void imprimirArray(int array[], int tam)

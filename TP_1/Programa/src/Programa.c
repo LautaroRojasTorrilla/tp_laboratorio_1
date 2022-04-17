@@ -48,7 +48,7 @@ int main(void) {
 
 	do{
 	mainMenu(x, y, z);
-	retornoMenu=getInt("\n\nFavor de ingresar una de las opciones:", 2, 1, 6, "\nHa seleccionado una opción no válida. Ingrese de a 1 a 6", &opcionIngresada);
+	retornoMenu=getInt("\n\nFavor de ingresar una de las opciones: ", 2, 1, 6, "\nHa seleccionado una opción no válida. Ingrese de a 1 a 6", &opcionIngresada);
 
 	if (retornoMenu == -1)
 	{
@@ -61,7 +61,7 @@ int main(void) {
 	{
 		case 1:
 			//puts("\nEntro 1");
-			retornoX=getInt("\nFavor de ingresar la cantidad de kilómetos", 2, 1, 30000, "Ha seleccionado una opción no válida. Vuelva a ingesar entre 1 y 30000:", &auxiliarX);
+			retornoX=getInt("\nFavor de ingresar la cantidad de kilómetos: ", 2, 1, 30000, "Ha seleccionado una opción no válida. Vuelva a ingesar entre 1 y 30000:", &auxiliarX);
 			if (retornoX == -1)
 			{
 				printf("\nHa agotado todos los intentos.");
@@ -86,7 +86,7 @@ int main(void) {
 			{
 				do {
 					printf("\n\t1. Precio vuelo Aerolíneas: \n\t2. Precio vuelo Latam:");
-					retornoOpcion2=getInt("\n\nFavor de ingresar una de las opciones:", 2, 1, 2, "\nHa seleccionado una opción no válida. Ingrese 1 o 2", &opcionIngresadaSub2);
+					retornoOpcion2=getInt("\n\nFavor de ingresar una de las opciones: ", 2, 1, 2, "\nHa seleccionado una opción no válida. Ingrese 1 o 2", &opcionIngresadaSub2);
 					if (retornoOpcion2 == -1)
 					{
 						printf("\nHa agotado todos los intentos.");
@@ -97,7 +97,7 @@ int main(void) {
 						{
 							case 1:
 								//puts("\nEntro 1");
-								retornoY=getFloat("\nFavor de ingresar el precio del vuelo", 2, 1, 200000, "Ha seleccionado una opción no válida. Vuelva a ingresar entre 1 y 200000:", &auxiliarY);
+								retornoY=getFloat("\nFavor de ingresar el precio del vuelo: ", 2, 1, 200000, "Ha seleccionado una opción no válida. Vuelva a ingresar entre 1 y 200000:", &auxiliarY);
 								if (retornoY == -1)
 								{
 									printf("\nHa agotado todos los intentos.");
@@ -112,7 +112,7 @@ int main(void) {
 							break;
 							default:
 								//puts("\nEntro 2");
-								retornoZ=getFloat("\nFavor de ingresar el precio del vuelo", 2, 1, 200000, "Ha seleccionado una opción no válida. Vuelva a ingresar entre 1 y 200000:", &auxiliarZ);
+								retornoZ=getFloat("\nFavor de ingresar el precio del vuelo: ", 2, 1, 200000, "Ha seleccionado una opción no válida. Vuelva a ingresar entre 1 y 200000:", &auxiliarZ);
 								if (retornoZ == -1)
 								{
 									printf("\nHa agotado todos los intentos.");
@@ -127,7 +127,7 @@ int main(void) {
 							break;
 						}
 					}
-				} while (menuContinuar("\nDesea volver a ingresar los valores? Seleccione una opción:")==1);
+				} while (menuContinuar2("\nDesea ingresar otro valor o modificar el reciente? \nSeleccione una opción: ")==1);
 			}
 		break;
 		case 3:
@@ -148,7 +148,7 @@ int main(void) {
 				precioBitcoinZ=precioBitcoin(z, BITCOIN);
 				precioKMZ=dividir(z, x);//no va a arrojar mensaje de error porque se inicializó con 0.
 				diferenciaPrecioYZ=restar(z, y);
-				printf("Los costos fueron calculados, está habilitado para visualizarlos en la opción 4.");
+				printf("\n\nLos costos fueron calculados, está habilitado para visualizarlos en la opción 4.");
 			}
 		break;
 		case 4:
